@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "pinDigests": true,
+   "semanticCommitScope": "deps",
+  "stabilityDays": 3,
+  "git-submodules": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor"],
+      "automerge": false,
+      "matchManagers": ["pip_requirements"]
+    },
+    {
+      "matchManagers": ["git-submodules"],
+      "automerge": true,
+      "automergeType": "branch",
+      "semanticCommitScope": "docs",
+      "stabilityDays": 0
+    }
+  ]
+}
