@@ -1,9 +1,9 @@
-FROM node:latest AS something
+FROM node:latest@sha256:0b553d28086d90b9b3be3339beb97401f8c0a83c17230a37ad99ff88fdad3b3f AS something
 
 RUN something
 
-FROM node AS something-else
+FROM node@sha256:0b553d28086d90b9b3be3339beb97401f8c0a83c17230a37ad99ff88fdad3b3f AS something-else
 
 RUN something
 
-FROM docker.io/circleci/node
+FROM docker.io/circleci/node@sha256:b2330f71df36d859dd822767ed7799bf67ea0a82efa451df6f121f52f7bd337d
